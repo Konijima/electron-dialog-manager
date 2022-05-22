@@ -1,6 +1,7 @@
 import { 
     ipcRenderer, 
     
+    CertificateTrustDialogOptions,
     MessageBoxOptions, 
     OpenDialogOptions, 
     SaveDialogOptions,
@@ -18,7 +19,7 @@ export function ErrorDialog(title: string, content: string): void {
     ipcRenderer.send('edm_errorDialog', title, content)
 }
 
-export async function CertificateTrustDialog(options: MessageBoxOptions): Promise<void> {
+export async function CertificateTrustDialog(options: CertificateTrustDialogOptions): Promise<void> {
     return new Promise((resolve) => {
         const _id = getId()
         ipcRenderer.send('edm_certificateDialog', _id, options)
