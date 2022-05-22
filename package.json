@@ -1,0 +1,24 @@
+{
+  "name": "electron-dialog-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Konijima/electron-dialog-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Konijima/electron-dialog-manager/issues"
+  },
+  "homepage": "https://github.com/Konijima/electron-dialog-manager#readme",
+  "dependencies": {
+    "electron": "^18.2.4"
+  }
+}
