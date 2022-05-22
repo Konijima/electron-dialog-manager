@@ -8,6 +8,11 @@
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "electron",
+    "typescript",
+    "dialog"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Konijima/electron-dialog-manager.git"
