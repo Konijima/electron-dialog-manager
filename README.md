@@ -1,4 +1,7 @@
 # electron-dialog-manager
+Typescript wrapper to use async dialogs in electron renderer process.  
+
+[![npm version](https://badge.fury.io/js/electron-dialog-manager.svg)](https://badge.fury.io/js/electron-dialog-manager)
 
 ## Install
 ```bash
