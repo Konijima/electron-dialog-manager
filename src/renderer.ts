@@ -1,8 +1,10 @@
 import { 
     ipcRenderer, 
+    
     MessageBoxOptions, 
     OpenDialogOptions, 
     SaveDialogOptions,
+
     MessageBoxReturnValue, 
     OpenDialogReturnValue,
     SaveDialogReturnValue
@@ -10,6 +12,24 @@ import {
 
 function getId() {
     return (Math.random() + Date.now()).toString(36)
+}
+
+export function ErrorDialog(title: string, content: string): void {
+    ipcRenderer.send('edm_errorDialog', title, content)
+}
+
+export async function CertificateTrustDialog(options: MessageBoxOptions): Promise<void> {
+    return new Promise((resolve) => {
+        const _id = getId()
+        ipcRenderer.send('edm_certificateDialog', _id, options)
+        function handle(_: any, id: string) {
+            if (_id === id) {
+                ipcRenderer.off('edm_certificateDialog', handle)
+                return resolve()
+            }
+        }
+        ipcRenderer.on('edm_certificateDialog', handle)
+    })
 }
 
 export async function MessageDialog(options: MessageBoxOptions): Promise<MessageBoxReturnValue> {

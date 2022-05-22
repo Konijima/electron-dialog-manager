@@ -1,4 +1,4 @@
-import DialogManagerMain from './main'
-import * as DialogManagerRenderer from './renderer'
+import { ElectronDialogManagerMain } from './main'
+import * as ElectronDialogManagerRenderer from './renderer'
 
-export { DialogManagerMain, DialogManagerRenderer }
+export { ElectronDialogManagerMain, ElectronDialogManagerRenderer }

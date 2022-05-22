@@ -8,16 +8,16 @@ npm install -s electron-dialog-manager
 ## Usage
 Initialize in the main process:
 ```ts
-import { DialogManagerMain } from 'electron-dialog-manager'
+import { ElectronDialogManagerMain } from 'electron-dialog-manager'
 
-DialogManagerMain()
+ElectronDialogManagerMain.set()
 ```
 
 Use in your renderer process:
 ```ts
-import { DialogManagerRenderer } from 'electron-dialog-manager'
+import { ElectronDialogManagerRenderer } from 'electron-dialog-manager'
 
-DialogManagerRenderer.MessageDialog({
+ElectronDialogManagerRenderer.MessageDialog({
     title: 'Hello',
     message: 'Hello world',
     buttons: [ 'Hey', 'Cancel' ]
@@ -26,3 +26,10 @@ DialogManagerRenderer.MessageDialog({
     console.log(result.response)
 })
 ```
+
+## Renderer Process Methods
+- [x] `ErrorDialog(title: string, content: string): void`
+- [x] `async CertificateTrustDialog(options: MessageBoxOptions): Promise<void>`
+- [x] `async MessageDialog(options: MessageBoxOptions): Promise<MessageBoxReturnValue>`
+- [x] `async OpenDialog(options: OpenDialogOptions): Promise<OpenDialogReturnValue>`
+- [x] `async SaveDialog(options: SaveDialogOptions): Promise<SaveDialogReturnValue>`
