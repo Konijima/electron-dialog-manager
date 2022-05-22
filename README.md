@@ -32,7 +32,7 @@ ElectronDialogManagerRenderer.MessageDialog({
 
 ## Renderer Process Methods
 - [x] `ErrorDialog(title: string, content: string): void`
-- [x] `async CertificateTrustDialog(options: MessageBoxOptions): Promise<void>`
+- [x] `async CertificateTrustDialog(options: CertificateTrustDialogOptions): Promise<void>`
 - [x] `async MessageDialog(options: MessageBoxOptions): Promise<MessageBoxReturnValue>`
 - [x] `async OpenDialog(options: OpenDialogOptions): Promise<OpenDialogReturnValue>`
 - [x] `async SaveDialog(options: SaveDialogOptions): Promise<SaveDialogReturnValue>`
