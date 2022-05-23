@@ -1,12 +1,12 @@
 import { 
-    ipcRenderer, 
+    ipcRenderer,
     
     CertificateTrustDialogOptions,
-    MessageBoxOptions, 
-    OpenDialogOptions, 
+    MessageBoxOptions,
+    OpenDialogOptions,
     SaveDialogOptions,
 
-    MessageBoxReturnValue, 
+    MessageBoxReturnValue,
     OpenDialogReturnValue,
     SaveDialogReturnValue
 } from 'electron'

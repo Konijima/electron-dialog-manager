@@ -1,7 +1,7 @@
 {
   "name": "electron-dialog-manager",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Typescript wrapper to use async dialogs in electron renderer process.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -16,8 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/Konijima/electron-dialog-manager.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Konijima",
+  "license": "CC0 1.0",
   "bugs": {
     "url": "https://github.com/Konijima/electron-dialog-manager/issues"
   },

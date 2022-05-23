@@ -1,14 +1,14 @@
 import { 
-    ipcMain, 
+    ipcMain,
     IpcMainEvent,
-    dialog, 
+    dialog,
 
     CertificateTrustDialogOptions,
-    MessageBoxOptions, 
-    OpenDialogOptions, 
-    SaveDialogOptions, 
+    MessageBoxOptions,
+    OpenDialogOptions,
+    SaveDialogOptions,
 
-    MessageBoxReturnValue, 
+    MessageBoxReturnValue,
     OpenDialogReturnValue,
     SaveDialogReturnValue
 } from 'electron'
@@ -54,7 +54,6 @@ export class ElectronDialogManagerMain {
         ipcMain.on('edm_messageDialog', messageDialog)
         ipcMain.on('edm_openDialog', openDialog)
         ipcMain.on('edm_saveDialog', saveDialog)
-
     }
 
     public static unset() {
