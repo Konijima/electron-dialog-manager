@@ -9,14 +9,14 @@ npm install -s electron-dialog-manager
 ```
 
 ## Usage
-Initialize in the main process:
+Activate in the main process:
 ```ts
 import { ElectronDialogManagerMain } from 'electron-dialog-manager'
 
-ElectronDialogManagerMain.set()
+ElectronDialogManagerMain.activate()
 ```
 
-Use in your renderer process:
+Use in a renderer process:
 ```ts
 import { ElectronDialogManagerRenderer } from 'electron-dialog-manager'
 
@@ -29,6 +29,10 @@ ElectronDialogManagerRenderer.showMessageDialog({
     console.log(result.response)
 })
 ```
+
+## Main Process Methods
+- [x] activate(): boolean
+- [x] deactivate(): boolean
 
 ## Renderer Process Methods
 - [x] showErrorBox(`title: string, content: string`): void
