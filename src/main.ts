@@ -47,7 +47,7 @@ function isMainProcess() {
     return (process && process.type === 'browser')
 }
 
-export class ElectronDialogManagerMain {
+export abstract class ElectronDialogManagerMain {
 
     /**
      * Activate dialog manager in the main process
