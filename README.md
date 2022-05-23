@@ -20,23 +20,24 @@ Use in a renderer process:
 ```ts
 import { ElectronDialogManagerRenderer } from 'electron-dialog-manager'
 
-ElectronDialogManagerRenderer.showMessageDialog({
+ElectronDialogManagerRenderer.showMessageBox({
     title: 'Hello',
     message: 'Hello world',
     buttons: [ 'Hey', 'Cancel' ]
 })
 .then((result) => {
+    // print the button index that was clicked
     console.log(result.response)
 })
 ```
 
 ## Main Process Methods
-- [x] activate(): boolean
-- [x] deactivate(): boolean
+- [x] activate(): `boolean`
+- [x] deactivate(): `boolean`
 
 ## Renderer Process Methods
-- [x] showErrorBox(`title: string, content: string`): void
-- [x] async showCertificateTrustDialog(`options: CertificateTrustDialogOptions`): Promise<void>
-- [x] async showMessageBox(`options: MessageBoxOptions`): Promise<MessageBoxReturnValue>
-- [x] async showOpenDialog(`options: OpenDialogOptions`): Promise<OpenDialogReturnValue>
-- [x] async showSaveDialog(`options: SaveDialogOptions`): Promise<SaveDialogReturnValue>
+- [x] showErrorBox(`title: string`, `content: string`): `void`
+- [x] `async` showCertificateTrustDialog(`options: CertificateTrustDialogOptions`): `Promise<void>`
+- [x] `async` showMessageBox(`options: MessageBoxOptions`): `Promise<MessageBoxReturnValue>`
+- [x] `async` showOpenDialog(`options: OpenDialogOptions`): `Promise<OpenDialogReturnValue>`
+- [x] `async` showSaveDialog(`options: SaveDialogOptions`): `Promise<SaveDialogReturnValue>`
