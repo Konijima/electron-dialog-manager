@@ -1,6 +1,6 @@
 {
   "name": "electron-dialog-manager",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Typescript wrapper to use async dialogs in electron renderer process.",
   "main": "dist/index.js",
   "scripts": {
