@@ -20,7 +20,7 @@ Use in your renderer process:
 ```ts
 import { ElectronDialogManagerRenderer } from 'electron-dialog-manager'
 
-ElectronDialogManagerRenderer.MessageDialog({
+ElectronDialogManagerRenderer.showMessageDialog({
     title: 'Hello',
     message: 'Hello world',
     buttons: [ 'Hey', 'Cancel' ]
@@ -31,8 +31,8 @@ ElectronDialogManagerRenderer.MessageDialog({
 ```
 
 ## Renderer Process Methods
-- [x] `ErrorDialog(title: string, content: string): void`
-- [x] `async CertificateTrustDialog(options: CertificateTrustDialogOptions): Promise<void>`
-- [x] `async MessageDialog(options: MessageBoxOptions): Promise<MessageBoxReturnValue>`
-- [x] `async OpenDialog(options: OpenDialogOptions): Promise<OpenDialogReturnValue>`
-- [x] `async SaveDialog(options: SaveDialogOptions): Promise<SaveDialogReturnValue>`
+- [x] showErrorBox(`title: string, content: string`): void
+- [x] async showCertificateTrustDialog(`options: CertificateTrustDialogOptions`): Promise<void>
+- [x] async showMessageBox(`options: MessageBoxOptions`): Promise<MessageBoxReturnValue>
+- [x] async showOpenDialog(`options: OpenDialogOptions`): Promise<OpenDialogReturnValue>
+- [x] async showSaveDialog(`options: SaveDialogOptions`): Promise<SaveDialogReturnValue>
